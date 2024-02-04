@@ -1,0 +1,13 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.register-form h1 {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Controle - Clima Tempo</title>
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <img
+        src="/assets/img/pngwing.com.png"
+        alt="Logo do Clima Tempo"
+        class="logo"
+      />
+      <div class="top-bar">
+        <!-- Barra de pesquisa -->
+        <input
+          type="text"
+          placeholder="Pesquisar cidade..."
+          class="search-bar"
+        />
+        <img
+          src="/assets/img/lupa.png"
+          alt="Ícone de lupa"
+          class="search-icon"
+        />
+      </div>
+      <div class="user-info" id="user-info">
+        <img
+          src="/assets/img/user.png"
+          alt="Avatar do usuário"
+          class="user-avatar"
+        />
+        <p class="user-name" onclick="toggleUserMenu()">Aguinaldo Mendes</p>
+        <div class="user-menu" id="user-menu">
+          <ul>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a href="/index.html" onclick="logout()">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Barra lateral esquerda -->
+    <nav class="sidebar">
+      <ul class="sidebar-menu">
+        <li>
+          <img src="/assets/img/dia1.png" alt="Um dia atrás" />
+          <span>Um dia atrás</span>
+        </li>
+        <li>
+          <img src="/assets/img/numero-7.png" alt="Uma semana atrás" />
+          <span>Uma semana atrás</span>
+        </li>
+        <li>
+          <img src="/assets/img/numero-30.png" alt="Um mês atrás" />
+          <span>Um mês atrás</span>
+        </li>
+        <li id="add-info">
+          <img src="/assets/img/adicionar.png" alt="Adicionar" />
+          <span>Adicionar</span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <main class="dashboard-content">
+        <div class="city-info">
+          <!-- H1 indicando a cidade -->
+          <h1 class="city-title">Sorocaba - SP</h1>
+          <!-- Adicionei uma div para mostrar a data e hora -->
+          <div class="date-time-info">
+            <p class="date" id="current-date">31 de Março de 2024</p>
+            <p class="time" id="current-time">14:30</p>
+          </div>
+        </div>
+
+        <section class="weather-info">
+          <div class="weather-block-container">
+            <div class="weather-row">
+              <div class="weather-block">
+                <img
+                  src="/assets/img/temperatura.png"
+                  alt="Ícone de Temperatura"
+                  class="weather-icon"
+                />
+                <p class="weather-label">Temperatura</p>
+                <p class="weather-value">25°C</p>
+              </div>
+
+              <div class="weather-block">
+                <img
+                  src="/assets/img/pressão.png"
+                  alt="Ícone de Pressão ATM"
+                  class="weather-icon"
+                />
+                <p class="weather-label">Pressão ATM</p>
+                <p class="weather-value">1015 hPa</p>
+              </div>
+
+              <div class="weather-block">
+                <img
+                  src="/assets/img/umidade.png"
+                  alt="Ícone de Umidade"
+                  class="weather-icon"
+                />
+                <p class="weather-label">Umidade</p>
+                <p class="weather-value">60%</p>
+              </div>
+            </div>
+
+            <div class="weather-row">
+              <div class="weather-block">
+                <img
+                  src="/assets/img/chuva-pesada.png"
+                  alt="Ícone de Precipitação"
+                  class="weather-icon"
+                />
+                <p class="weather-label">Precipitação</p>
+                <p class="weather-value">5mm</p>
+              </div>
+
+              <div class="weather-block">
+                <img
+                  src="/assets/img/previsao-do-tempo.png"
+                  alt="Ícone de Condição do Tempo"
+                  class="weather-icon"
+                />
+                <p class="weather-label">Condição do Tempo</p>
+                <p class="weather-value">Ensolarado</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="manual-info-form" style="display: none">
+          <h2>Adicionar Informações Manualmente</h2>
+          <form id="info-form-fields">
+            <label for="temperature">Temperatura (°C):</label>
+            <input
+              type="text"
+              id="temperature"
+              name="temperature"
+            /><br /><br />
+
+            <label for="pressure">Pressão ATM (hPa):</label>
+            <input type="text" id="pressure" name="pressure" /><br /><br />
+
+            <label for="humidity">Umidade (%):</label>
+            <input type="text" id="humidity" name="humidity" /><br /><br />
+
+            <label for="precipitation">Precipitação (mm):</label>
+            <input
+              type="text"
+              id="precipitation"
+              name="precipitation"
+            /><br /><br />
+
+            <label for="weather">Condição do Tempo:</label>
+            <input type="text" id="weather" name="weather" /><br /><br />
+
+            <button type="button" id="save-info-btn">Salvar</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="/js/userPopUp.js"></script>
+  </body>
+</html>

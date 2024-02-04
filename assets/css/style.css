@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("5262178c4cbbd78d89693c0ab07406b1.jpeg") center/cover
+    no-repeat;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  background-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 20px; /* Ajuste conforme necessário para o espaçamento desejado */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px; /* Ajuste conforme necessário para o espaçamento desejado */
+}
+
+h1 {
+  color: #333;
+}
+
+label {
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 100px; /* ajuste o tamanho conforme necessário */
+  height: auto; /* mantém a proporção original da imagem */
+  margin-bottom: 20px; /* espaço entre o logo e os outros elementos */
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px; /* Ajuste o valor conforme necessário */
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.footer-link svg {
+  margin-right: 8px; /* Ajuste o valor conforme necessário */
+}
+
+.footer-link + .footer-link svg {
+  margin-left: 8px; /* Adiciona uma margem à esquerda apenas para o segundo ícone */
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: right;
+}
